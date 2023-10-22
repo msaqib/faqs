@@ -1,0 +1,41 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "Open Sans", sans-serif;
+}
+
+.centered {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #547700;
+}
+
+h2 {
+    text-align: center;
+    height: 2rem;
+}
+
+.faqs {
+    list-style-type: none;
+}
+
+.faqs li {
+    margin-bottom: 20px;
+}
+
+.faqs li div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.answer-hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.faqs li span {
+    cursor: pointer
+}
