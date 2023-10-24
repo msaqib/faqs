@@ -5,17 +5,28 @@
     font-family: "Roboto", "Open Sans", sans-serif;
 }
 
-.centered {
-    height: 100vh;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+body {
     background-color: #547700;
 }
 
-h2 {
-    text-align: center;
-    height: 2rem;
+#main {
+    margin-bottom: 20px;    
+}
+
+.centered {
+    width: 80%;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center;
+    background-color: #777777;
+    border-radius: 20px;
+    box-shadow: 10px 10px 3px #555555;
+    padding: 100px 20px;
 }
 
 .faqs {
@@ -24,6 +35,9 @@ h2 {
 
 .faqs li {
     margin-bottom: 20px;
+    background-color: #aaaaaa;
+    padding:4px;
+    border-radius: 4px;
 }
 
 .faqs li div {

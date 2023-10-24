@@ -16,7 +16,6 @@ questions = [
 ]
 
 questions.forEach( question => {
-    console.log(question)
     const qa = document.createElement('li')
     const dv = document.createElement('div')
     const p1 = document.createElement('p')
@@ -24,6 +23,10 @@ questions.forEach( question => {
     const p2 = document.createElement('p')
     p1.innerText = question.question
     span.innerHTML = '<span class="material-symbols-outlined">add</span>'
+    span.addEventListener('click', (e) => {
+        var parentDiv = e.currentTarget.parentElement;
+        parentDiv.nextSibling.classList.remove('answer-hidden')
+    })
     dv.appendChild(p1)
     dv.appendChild(span)
     p2.innerText = question.answer
