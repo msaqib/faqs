@@ -38,11 +38,13 @@ body {
     background-color: #aaaaaa;
     padding:4px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .faqs li div {
     display: flex;
     justify-content: space-between;
+    /* cursor: pointer; */
 }
 
 .answer-hidden {
@@ -50,6 +52,6 @@ body {
     height: 0;
 }
 
-.faqs li span {
+/* .faqs li span {
     cursor: pointer
-}
+} */

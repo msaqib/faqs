@@ -23,12 +23,13 @@ questions.forEach( question => {
     const p2 = document.createElement('p')
     p1.innerText = question.question
     span.innerHTML = '<span class="material-symbols-outlined">add</span>'
-    span.addEventListener('click', (e) => {
-        var parentDiv = e.currentTarget.parentElement;
-        parentDiv.nextSibling.classList.remove('answer-hidden')
-    })
     dv.appendChild(p1)
     dv.appendChild(span)
+    qa.addEventListener('click', (e) => {
+        var parentDiv = e.currentTarget.parentElement;
+        const desc = e.currentTarget.querySelector(':scope > p')
+        desc.classList.toggle('answer-hidden')
+    })
     p2.innerText = question.answer
     p2.classList.add('answer-hidden')
     qa.appendChild(dv)
