@@ -26,7 +26,8 @@ questions.forEach( question => {
     dv.appendChild(p1)
     dv.appendChild(span)
     qa.addEventListener('click', (e) => {
-        var parentDiv = e.currentTarget.parentElement;
+        const pElements = document.querySelectorAll('li > p:not(.answer-hidden)');
+        pElements.forEach( (element) => element.classList.toggle('answer-hidden'))
         const desc = e.currentTarget.querySelector(':scope > p')
         desc.classList.toggle('answer-hidden')
     })
