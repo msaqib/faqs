@@ -44,14 +44,9 @@ body {
 .faqs li div {
     display: flex;
     justify-content: space-between;
-    /* cursor: pointer; */
 }
 
 .answer-hidden {
     visibility: hidden;
     height: 0;
 }
-
-/* .faqs li span {
-    cursor: pointer
-} */
