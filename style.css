@@ -39,6 +39,7 @@ body {
     padding:4px;
     border-radius: 4px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .faqs li div {
@@ -49,4 +50,11 @@ body {
 .answer-hidden {
     visibility: hidden;
     height: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .centered {
+        width: 100vw;
+        box-shadow: none;
+    }   
 }
