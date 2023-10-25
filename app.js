@@ -22,14 +22,25 @@ questions.forEach( question => {
     const span = document.createElement('span')
     const p2 = document.createElement('p')
     p1.innerText = question.question
-    span.innerHTML = '<span class="material-symbols-outlined">add</span>'
+    span.classList.add('material-symbols-outlined')
+    span.innerText = 'add'
     dv.appendChild(p1)
     dv.appendChild(span)
     qa.addEventListener('click', (e) => {
         const pElements = document.querySelectorAll('li > p:not(.answer-hidden)');
-        pElements.forEach( (element) => element.classList.remove('answer-hidden'))
-        const desc = e.currentTarget.querySelector(':scope > p')
-        desc.classList.toggle('answer-hidden')
+        const clickedElement = e.currentTarget.querySelector(':scope > p')
+        clickedElement.classList.toggle('answer-hidden')
+        e.currentTarget.querySelector('span').innerText = 'remove'
+        if (pElements.length !== 0) {
+            // Are we clicking on an answer that is already open?
+            if (pElements[0] === clickedElement) {
+                e.currentTarget.querySelector('span').innerText = 'add'
+            }
+            else {
+                pElements[0].classList.add('answer-hidden')
+                pElements[0].parentNode.querySelector('span').innerText = 'add'
+            }
+        }
     })
     p2.innerText = question.answer
     p2.classList.add('answer-hidden')
